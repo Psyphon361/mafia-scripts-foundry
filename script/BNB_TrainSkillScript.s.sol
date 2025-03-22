@@ -20,6 +20,7 @@ contract BNB_TrainSkillScript is Script {
     }
 
     function train(uint8 trainType) public {
+        // Start broadcast
         vm.startBroadcast();
 
         // Create an instance of the contract
@@ -28,7 +29,7 @@ contract BNB_TrainSkillScript is Script {
         // Call the trainSkill function
         contractInstance.trainSkill(trainType);
 
-        // Stop broadcasting
+        // Stop broadcast
         vm.stopBroadcast();
     }
 }
