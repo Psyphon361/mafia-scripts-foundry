@@ -11,12 +11,8 @@ contract PLS_TrainSkillScript is Script {
     // PulseChain mainnet train kill skill contract address
     address constant PLS_KILL_SKILL_CA = 0xdC45E5469A8B6D020473F69fEC91C0f0e83a3308;
 
-    uint8 BOTTLES_IN_BACKYARD = 0;
-    uint8 DAY_AT_SHOOTING_RANGE = 1;
-    uint8 HIRE_A_PERSONAL_TRAINER = 2;
-
-    function run() external {
-        train(HIRE_A_PERSONAL_TRAINER);
+    function run(uint8 trainType) external {
+        train(trainType);
     }
 
     function train(uint8 trainType) public {
