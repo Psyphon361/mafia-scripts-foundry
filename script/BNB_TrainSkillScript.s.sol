@@ -8,9 +8,11 @@ import "forge-std/console.sol";
 interface ITrainSkill {
     function trainSkill(uint8 trainType) external;
 }
+
 interface INickCar {
     function nickCar(uint8 carType, string calldata message, bytes calldata signature) external;
 }
+
 interface IMafiaJail {
     function bustOut(address prisoner) external;
     function isUserInJail(address user) external view returns (bool);
@@ -117,4 +119,5 @@ contract BNB_TrainSkillScript is Script {
         // log the result to read from stdout
         console.log(inJail);
     }
+
 }

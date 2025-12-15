@@ -30,7 +30,6 @@ contract PLS_TrainSkillScript is Script {
     // PulseChain mainnet Jail Bust contract address
     address constant PLS_JAIL_BUST_CA = 0xDCD5E9c0b2b4E9Cb93677A258521D854b3A9f5A1;
 
-
     function run(uint8 trainType) external {
         train(trainType);
     }
@@ -87,6 +86,7 @@ contract PLS_TrainSkillScript is Script {
         // Stop broadcast
         vm.stopBroadcast();
     }
+
 
     function bustOut(address prisoner) public {
         require(prisoner != address(0), "Invalid prisoner address");
